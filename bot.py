@@ -5,7 +5,6 @@ from discord.ext import commands
 import os
 from utils.redis_manager import RedisPool
 from utils.database import PostgresPool
-from datetime import datetime
 import config
 
 

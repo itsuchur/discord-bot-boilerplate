@@ -14,7 +14,7 @@ class Basic(commands.Cog):
 
         async with self.bot.db as conn:
             result = await conn.execute(
-                text(f"SELECT name, member_count FROM guilds WHERE guild_id = :guild_id"),
+                text("SELECT name, member_count FROM guilds WHERE guild_id = :guild_id"),
                 {"guild_id": ctx.guild.id}
             )
             db_info = result.fetchone()
